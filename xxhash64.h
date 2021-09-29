@@ -88,7 +88,7 @@ public:
 
     // copy remainder to temporary buffer
     bufferSize = stop - data;
-    for (unsigned int i = 0; i < bufferSize; i++)
+    for (uint64_t i = 0; i < bufferSize; i++)
       buffer[i] = data[i];
 
     // done
@@ -175,7 +175,7 @@ private:
 
   uint64_t      state[4];
   unsigned char buffer[MaxBufferSize];
-  unsigned int  bufferSize;
+  uint64_t      bufferSize;
   uint64_t      totalLength;
 
   /// rotate bits, should compile to a single CPU instruction (ROL)
